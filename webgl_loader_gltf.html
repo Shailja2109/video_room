@@ -54,15 +54,15 @@
         <script type="importmap">
         {
             "imports": {
-            "three": "./three.module.js"
+            "three": "./js/three.module.js"
             }
         }
         </script>
         <script type="module">
 
             import * as THREE from 'three';
-            import { OrbitControls } from './OrbitControls.js';
-            import { GLTFLoader } from './GLTFLoader.js';
+            import { OrbitControls } from './js/OrbitControls.js';
+            import { GLTFLoader } from './js/GLTFLoader.js';
 
             let camera, scene, renderer, video, videoTexture; 
 
@@ -123,7 +123,6 @@
                 // Loader to add 3D Object
                 const loader = new GLTFLoader().setPath( './cyberclub_asia/' ); // 3D Object
                 loader.load( 'cyberclub_asianv8.gltf', function ( gltf ) {
-                    console.log(gltf.scene.children) // Children list 
                     scene.add( gltf.scene );
                     for (let child in gltf.scene.children){
                         // Screen 1
